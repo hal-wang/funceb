@@ -1,0 +1,68 @@
+{
+  "name": "@hal-wang/funcweb",
+  "version": "0.0.1-beta.1",
+  "description": "云函数变静态网站",
+  "homepage": "https://github.com/hal-wang/funcweb",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hal-wang/funcweb"
+  },
+  "keywords": [
+    "nodejs-api",
+    "cloud-function",
+    "nodejs-server",
+    "serverless",
+    "nodejs",
+    "ts",
+    "typescript",
+    "javascript",
+    "js"
+  ],
+  "bugs": {
+    "url": "https://github.com/hal-wang/funcweb/issues",
+    "email": "support@hal.wang"
+  },
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "sh build.sh",
+    "deploy": "sh build.sh && npm publish --access=public",
+    "deploy:beta": "sh build.sh && npm publish --tag=beta --access=public",
+    "test": "jest",
+    "eslint": "eslint src --ext .ts"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "author": "hal-wang",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^26.0.22",
+    "@types/mime": "^2.0.3",
+    "@types/node": "^14.14.37",
+    "@typescript-eslint/eslint-plugin": "^4.20.0",
+    "@typescript-eslint/parser": "^4.20.0",
+    "eslint": "^7.23.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "jest": "^26.6.3",
+    "prettier": "^2.2.1",
+    "ts-jest": "^26.5.4",
+    "typescript": "^4.2.3"
+  },
+  "files": [
+    "dist/",
+    "src",
+    "test/",
+    ".eslintrc.js",
+    ".gitignore",
+    "build.sh",
+    "jest.config.js",
+    ".LICENSE",
+    "package.json",
+    "README.md",
+    "tsconfig.json"
+  ],
+  "dependencies": {
+    "mime": "^2.5.2"
+  }
+}
