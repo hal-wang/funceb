@@ -1,11 +1,11 @@
 {
-  "name": "@hal-wang/funcweb",
-  "version": "0.0.1-beta.7",
+  "name": "@hal-wang/funceb",
+  "version": "0.0.1-beta.8",
   "description": "云函数变静态网站",
-  "homepage": "https://github.com/hal-wang/funcweb",
+  "homepage": "https://github.com/hal-wang/funceb",
   "repository": {
     "type": "git",
-    "url": "https://github.com/hal-wang/funcweb"
+    "url": "https://github.com/hal-wang/funceb"
   },
   "keywords": [
     "nodejs-api",
@@ -19,7 +19,7 @@
     "js"
   ],
   "bugs": {
-    "url": "https://github.com/hal-wang/funcweb/issues",
+    "url": "https://github.com/hal-wang/funceb/issues",
     "email": "support@hal.wang"
   },
   "main": "dist/index.js",

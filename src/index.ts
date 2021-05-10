@@ -2,7 +2,7 @@ import * as path from "path";
 import * as fs from "fs";
 import { getType } from "mime";
 
-export default class Funcweb {
+export default class Funceb {
   private readonly filePath: string;
 
   constructor(reqPath: string, webPath?: string) {
