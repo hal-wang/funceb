@@ -3,7 +3,7 @@ import * as fs from "fs";
 import { getType } from "mime";
 
 export default class Funcweb {
-  readonly filePath: string;
+  private readonly filePath: string;
 
   constructor(url: string, basePath?: string) {
     if (url.endsWith("/")) {
@@ -27,6 +27,10 @@ export default class Funcweb {
     }
 
     this.filePath = "";
+  }
+
+  get status(): 200 | 404 {
+    return this.filePath ? 200 : 404;
   }
 
   get content(): string | undefined {
