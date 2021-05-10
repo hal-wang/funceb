@@ -16,5 +16,8 @@ test("404 test", async function () {
   const path = "/not-exist";
   const funceb = new Funceb(path, "test/test-web");
   expect(funceb.status).toBe(200);
-  expect(funceb.content).toBe("404 page");
+  expect(!!funceb.content).toBe(true);
+  if (funceb.content) {
+    expect(funceb.content.toString("utf-8")).toBe("404 page");
+  }
 });
