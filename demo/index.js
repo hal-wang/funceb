@@ -10,4 +10,6 @@ app.use(async (ctx) => {
   ctx.status = funceb.status;
 });
 
-app.listen(3001);
+const port = 3000;
+console.info(`koa: http://localhost:${port}`);
+app.listen(port);
