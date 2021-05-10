@@ -26,6 +26,11 @@ export default class Funcweb {
       return;
     }
 
+    this.filePath = path.join(process.cwd(), basePath || "", "404.html");
+    if (fs.existsSync(this.filePath) && fs.lstatSync(this.filePath).isFile()) {
+      return;
+    }
+
     this.filePath = "";
   }
 
