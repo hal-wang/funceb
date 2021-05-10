@@ -40,3 +40,16 @@ exports.main = async (event) => {
   };
 };
 ```
+
+## Demo
+
+用 koa 托管 vue 静态网站。
+
+在 demo 文件夹中，运行
+
+```
+npm install
+npm run dev
+```
+
+浏览器访问 `http://localhost:3001`
