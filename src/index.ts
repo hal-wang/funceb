@@ -5,7 +5,11 @@ import { getType } from "mime";
 export default class Funceb {
   private readonly filePath: string;
 
-  constructor(reqPath: string, webPath?: string) {
+  constructor(
+    reqPath: string,
+    webPath?: string,
+    private readonly encoding?: BufferEncoding
+  ) {
     reqPath = this.trimPath(reqPath);
     if (webPath) {
       webPath = this.trimPath(webPath);
@@ -34,12 +38,12 @@ export default class Funceb {
     return this.filePath ? 200 : 404;
   }
 
-  get content(): Buffer | undefined {
+  get content(): string | Buffer | undefined {
     if (!this.filePath) {
       return;
     }
 
-    return fs.readFileSync(this.filePath);
+    return fs.readFileSync(this.filePath, this.encoding || null);
   }
 
   get mine(): string | undefined {
