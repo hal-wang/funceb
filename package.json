@@ -1,6 +1,6 @@
 {
   "name": "@hal-wang/funceb",
-  "version": "0.0.1-beta.8",
+  "version": "0.1.0",
   "description": "云函数变静态网站",
   "homepage": "https://github.com/hal-wang/funceb",
   "repository": {
@@ -8,15 +8,9 @@
     "url": "https://github.com/hal-wang/funceb"
   },
   "keywords": [
-    "nodejs-api",
-    "cloud-function",
-    "nodejs-server",
-    "serverless",
     "nodejs",
-    "ts",
-    "typescript",
-    "javascript",
-    "js"
+    "serverless",
+    "static-website"
   ],
   "bugs": {
     "url": "https://github.com/hal-wang/funceb/issues",
@@ -57,7 +51,7 @@
     ".gitignore",
     "build.sh",
     "jest.config.js",
-    ".LICENSE",
+    "LICENSE",
     "package.json",
     "README.md",
     "tsconfig.json"
