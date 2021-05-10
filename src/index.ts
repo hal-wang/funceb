@@ -34,12 +34,12 @@ export default class Funceb {
     return this.filePath ? 200 : 404;
   }
 
-  get content(): string | undefined {
+  get content(): Buffer | undefined {
     if (!this.filePath) {
       return;
     }
 
-    return fs.readFileSync(this.filePath, "utf8");
+    return fs.readFileSync(this.filePath);
   }
 
   get mine(): string | undefined {
