@@ -4,6 +4,11 @@
 
 ## 用法
 
+`Funcweb` 构造函数接收两个参数
+
+- reqPath: 请求路径，如 `/login`、`/product/funcweb` 等
+- webPath: 可选参数，如果 `index.html` 不是在根目录，需要设置此参数，值为 `index.html` 相对路径，如 `/web`、`/webset/v2` 等
+
 ### koa
 
 ```JS
