@@ -3,27 +3,25 @@ import * as fs from "fs";
 import { getType } from "mime";
 
 export default class Funcweb {
-  private readonly filePath: string;
+  readonly filePath: string;
 
   constructor(url: string, basePath?: string) {
     if (url.endsWith("/")) {
       url = url.substr(0, url.length - 1);
     }
-    if (basePath && !url.endsWith(basePath)) {
-      url = `${url}/${basePath}`;
+    if (url.startsWith("/")) {
+      url = url.substr(1, url.length - 1);
+    }
+    if (basePath && !url.startsWith(basePath)) {
+      url = `${basePath}/${url}`;
     }
 
-    this.filePath = path.join(__dirname, url);
+    this.filePath = path.join(process.cwd(), url);
     if (fs.existsSync(this.filePath) && fs.lstatSync(this.filePath).isFile()) {
       return;
     }
 
-    this.filePath = path.join(__dirname, url, "index.html");
-    if (fs.existsSync(this.filePath) && fs.lstatSync(this.filePath).isFile()) {
-      return;
-    }
-
-    this.filePath = path.join(__dirname, url, "index.js");
+    this.filePath = path.join(process.cwd(), url, "index.html");
     if (fs.existsSync(this.filePath) && fs.lstatSync(this.filePath).isFile()) {
       return;
     }
