@@ -49,7 +49,7 @@ exports.main = async (event) => {
 
 ```
 npm install
-npm run dev
+npm start
 ```
 
-浏览器访问 `http://localhost:3001`
+浏览器访问 `http://localhost:3000`
