@@ -1,13 +1,20 @@
+
+> 已废弃，建议使用功能更丰富的 [@sfajs/static](https://github.com/sfajs/static)
+>
+> 配合 [@sfajs/http](https://github.com/sfajs/http)（http 服务）、 [@sfajs/cloudbase](https://github.com/sfajs/cloudbase)（腾讯云 cloudbase）等
+
+
 # funceb（function hosting static website）
 
 使用 nodejs (云函数, koa, express, ...) 托管静态网站
 
 ## 用法
 
-`Funceb` 构造函数接收两个参数
+`Funceb` 构造函数接收3个参数
 
 1. reqPath: 请求路径，如 `/login`、`/product/funceb` 等
 2. webPath: 可选参数，如果 `index.html` 不是在根目录，需要设置此参数，值为 `index.html` 相对路径，如 `/web`、`/webset/v2` 等
+3. encoding: 文件流编码
 
 ### koa
 
